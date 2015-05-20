@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		946FEBC41B0C6FCE00DA0D56 /* GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FEBC31B0C6FCE00DA0D56 /* GPX.swift */; };
+		946FEBC61B0C729800DA0D56 /* MKGPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FEBC51B0C729800DA0D56 /* MKGPX.swift */; };
+		946FEBC81B0C7CE500DA0D56 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FEBC71B0C7CE500DA0D56 /* ImageViewController.swift */; };
 		949821801B0B24EC00AC3239 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498217F1B0B24EC00AC3239 /* AppDelegate.swift */; };
-		949821821B0B24EC00AC3239 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949821811B0B24EC00AC3239 /* ViewController.swift */; };
+		949821821B0B24EC00AC3239 /* GPXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949821811B0B24EC00AC3239 /* GPXViewController.swift */; };
 		949821851B0B24EC00AC3239 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 949821831B0B24EC00AC3239 /* Main.storyboard */; };
 		949821871B0B24EC00AC3239 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 949821861B0B24EC00AC3239 /* Images.xcassets */; };
 		9498218A1B0B24EC00AC3239 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949821881B0B24EC00AC3239 /* LaunchScreen.xib */; };
@@ -26,10 +29,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		946FEBC31B0C6FCE00DA0D56 /* GPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPX.swift; sourceTree = "<group>"; };
+		946FEBC51B0C729800DA0D56 /* MKGPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKGPX.swift; sourceTree = "<group>"; };
+		946FEBC71B0C7CE500DA0D56 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		9498217A1B0B24EC00AC3239 /* Trax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9498217E1B0B24EC00AC3239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9498217F1B0B24EC00AC3239 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		949821811B0B24EC00AC3239 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		949821811B0B24EC00AC3239 /* GPXViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXViewController.swift; sourceTree = "<group>"; };
 		949821841B0B24EC00AC3239 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		949821861B0B24EC00AC3239 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		949821891B0B24EC00AC3239 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -78,8 +84,11 @@
 			isa = PBXGroup;
 			children = (
 				9498217F1B0B24EC00AC3239 /* AppDelegate.swift */,
-				949821811B0B24EC00AC3239 /* ViewController.swift */,
+				949821811B0B24EC00AC3239 /* GPXViewController.swift */,
 				949821831B0B24EC00AC3239 /* Main.storyboard */,
+				946FEBC31B0C6FCE00DA0D56 /* GPX.swift */,
+				946FEBC51B0C729800DA0D56 /* MKGPX.swift */,
+				946FEBC71B0C7CE500DA0D56 /* ImageViewController.swift */,
 				9498217D1B0B24EC00AC3239 /* Supporting Files */,
 			);
 			path = Trax;
@@ -212,8 +221,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				949821821B0B24EC00AC3239 /* ViewController.swift in Sources */,
+				949821821B0B24EC00AC3239 /* GPXViewController.swift in Sources */,
+				946FEBC61B0C729800DA0D56 /* MKGPX.swift in Sources */,
+				946FEBC81B0C7CE500DA0D56 /* ImageViewController.swift in Sources */,
 				949821801B0B24EC00AC3239 /* AppDelegate.swift in Sources */,
+				946FEBC41B0C6FCE00DA0D56 /* GPX.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +425,7 @@
 				9498219B1B0B24EC00AC3239 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9498219C1B0B24EC00AC3239 /* Build configuration list for PBXNativeTarget "TraxTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +434,7 @@
 				9498219E1B0B24EC00AC3239 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
