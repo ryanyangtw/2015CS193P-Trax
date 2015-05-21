@@ -10,6 +10,7 @@
 		946FEBC41B0C6FCE00DA0D56 /* GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FEBC31B0C6FCE00DA0D56 /* GPX.swift */; };
 		946FEBC61B0C729800DA0D56 /* MKGPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FEBC51B0C729800DA0D56 /* MKGPX.swift */; };
 		946FEBC81B0C7CE500DA0D56 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FEBC71B0C7CE500DA0D56 /* ImageViewController.swift */; };
+		946FEBCA1B0D803F00DA0D56 /* EditWaypointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FEBC91B0D803F00DA0D56 /* EditWaypointViewController.swift */; };
 		949821801B0B24EC00AC3239 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498217F1B0B24EC00AC3239 /* AppDelegate.swift */; };
 		949821821B0B24EC00AC3239 /* GPXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949821811B0B24EC00AC3239 /* GPXViewController.swift */; };
 		949821851B0B24EC00AC3239 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 949821831B0B24EC00AC3239 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		946FEBC31B0C6FCE00DA0D56 /* GPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPX.swift; sourceTree = "<group>"; };
 		946FEBC51B0C729800DA0D56 /* MKGPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKGPX.swift; sourceTree = "<group>"; };
 		946FEBC71B0C7CE500DA0D56 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		946FEBC91B0D803F00DA0D56 /* EditWaypointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWaypointViewController.swift; sourceTree = "<group>"; };
 		9498217A1B0B24EC00AC3239 /* Trax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9498217E1B0B24EC00AC3239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9498217F1B0B24EC00AC3239 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				946FEBC31B0C6FCE00DA0D56 /* GPX.swift */,
 				946FEBC51B0C729800DA0D56 /* MKGPX.swift */,
 				946FEBC71B0C7CE500DA0D56 /* ImageViewController.swift */,
+				946FEBC91B0D803F00DA0D56 /* EditWaypointViewController.swift */,
 				9498217D1B0B24EC00AC3239 /* Supporting Files */,
 			);
 			path = Trax;
@@ -223,6 +226,7 @@
 			files = (
 				949821821B0B24EC00AC3239 /* GPXViewController.swift in Sources */,
 				946FEBC61B0C729800DA0D56 /* MKGPX.swift in Sources */,
+				946FEBCA1B0D803F00DA0D56 /* EditWaypointViewController.swift in Sources */,
 				946FEBC81B0C7CE500DA0D56 /* ImageViewController.swift in Sources */,
 				949821801B0B24EC00AC3239 /* AppDelegate.swift in Sources */,
 				946FEBC41B0C6FCE00DA0D56 /* GPX.swift in Sources */,

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ldo-jV-3UG">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,6 +19,10 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GMp-ad-Wk1">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="K9u-ky-XDk" appends="YES" id="7JW-4a-u5r"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -32,11 +37,98 @@
                     <connections>
                         <outlet property="mapView" destination="GMp-ad-Wk1" id="Brt-My-3Xu"/>
                         <segue destination="spj-2u-k4H" kind="show" identifier="Show Image" id="Fyv-Q9-HSl"/>
+                        <segue destination="ueU-K4-LnG" kind="popoverPresentation" identifier="Edit Waypoint" popoverAnchorView="GMp-ad-Wk1" id="HZV-dn-QHf">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="K9u-ky-XDk">
+                    <connections>
+                        <action selector="addWaypoint:" destination="BYZ-38-t0r" id="bTX-w1-oFq"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1194" y="244"/>
+        </scene>
+        <!--Edit Waypoint-->
+        <scene sceneID="PZB-wz-HaV">
+            <objects>
+                <viewController id="ueU-K4-LnG" customClass="EditWaypointViewController" customModule="Trax" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YGj-HN-8c8"/>
+                        <viewControllerLayoutGuide type="bottom" id="c1Q-33-QeT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W0q-sW-2F6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XfR-C3-7NS">
+                                <rect key="frame" x="70" y="28" width="514" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrZ-ip-2ib">
+                                <rect key="frame" x="16" y="69" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNZ-Yk-Mrs">
+                                <rect key="frame" x="16" y="28" width="46" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mGb-Fd-VKJ">
+                                <rect key="frame" x="70" y="66" width="514" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="mGb-Fd-VKJ" firstAttribute="top" secondItem="XfR-C3-7NS" secondAttribute="bottom" constant="8" symbolic="YES" id="3Do-3R-Vb3"/>
+                            <constraint firstItem="XfR-C3-7NS" firstAttribute="top" secondItem="YGj-HN-8c8" secondAttribute="bottom" constant="8" symbolic="YES" id="AQz-k5-REr"/>
+                            <constraint firstItem="mGb-Fd-VKJ" firstAttribute="baseline" secondItem="zrZ-ip-2ib" secondAttribute="baseline" id="B0O-Fe-QPH"/>
+                            <constraint firstItem="nNZ-Yk-Mrs" firstAttribute="leading" secondItem="W0q-sW-2F6" secondAttribute="leadingMargin" id="FN9-m7-r3d"/>
+                            <constraint firstItem="nNZ-Yk-Mrs" firstAttribute="trailing" secondItem="zrZ-ip-2ib" secondAttribute="trailing" id="MbT-hW-hZz"/>
+                            <constraint firstItem="nNZ-Yk-Mrs" firstAttribute="width" secondItem="zrZ-ip-2ib" secondAttribute="width" id="PP7-1a-txq"/>
+                            <constraint firstItem="XfR-C3-7NS" firstAttribute="trailing" secondItem="W0q-sW-2F6" secondAttribute="trailingMargin" id="VGt-74-WaR"/>
+                            <constraint firstItem="nNZ-Yk-Mrs" firstAttribute="top" secondItem="YGj-HN-8c8" secondAttribute="bottom" constant="8" symbolic="YES" id="bqo-av-bk3"/>
+                            <constraint firstItem="mGb-Fd-VKJ" firstAttribute="baseline" secondItem="zrZ-ip-2ib" secondAttribute="baseline" id="imy-Bg-jWd"/>
+                            <constraint firstItem="XfR-C3-7NS" firstAttribute="baseline" secondItem="nNZ-Yk-Mrs" secondAttribute="baseline" id="j2o-9x-QTG"/>
+                            <constraint firstItem="nNZ-Yk-Mrs" firstAttribute="trailing" secondItem="zrZ-ip-2ib" secondAttribute="trailing" id="jYJ-65-bq2"/>
+                            <constraint firstItem="XfR-C3-7NS" firstAttribute="leading" secondItem="nNZ-Yk-Mrs" secondAttribute="trailing" constant="8" symbolic="YES" id="kBp-59-fgV"/>
+                            <constraint firstItem="zrZ-ip-2ib" firstAttribute="top" secondItem="nNZ-Yk-Mrs" secondAttribute="bottom" constant="8" symbolic="YES" id="ks4-cH-Ebo"/>
+                            <constraint firstItem="c1Q-33-QeT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="mGb-Fd-VKJ" secondAttribute="bottom" constant="8" symbolic="YES" id="nTj-Aw-Kmz"/>
+                            <constraint firstItem="nNZ-Yk-Mrs" firstAttribute="width" secondItem="zrZ-ip-2ib" secondAttribute="width" id="o4b-26-98V"/>
+                            <constraint firstItem="XfR-C3-7NS" firstAttribute="width" secondItem="mGb-Fd-VKJ" secondAttribute="width" id="oZc-H4-DSq"/>
+                            <constraint firstItem="XfR-C3-7NS" firstAttribute="leading" secondItem="mGb-Fd-VKJ" secondAttribute="leading" id="yFf-m9-pFu"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MbT-hW-hZz"/>
+                                <exclude reference="PP7-1a-txq"/>
+                                <exclude reference="ks4-cH-Ebo"/>
+                                <exclude reference="B0O-Fe-QPH"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Waypoint" id="dzm-n8-WYt">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Dje-eF-bjR">
+                            <connections>
+                                <action selector="done:" destination="ueU-K4-LnG" id="fKC-vU-Wfx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="infoTextField" destination="mGb-Fd-VKJ" id="Hgk-rr-YPN"/>
+                        <outlet property="nameTextField" destination="XfR-C3-7NS" id="PEh-fr-ibK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pae-Wf-yHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1880" y="-456"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="nWp-gx-gFy">
@@ -94,5 +186,26 @@
             </objects>
             <point key="canvasLocation" x="535" y="244"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hbr-gt-SjN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZcI-aS-RGC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GG5-eA-JqE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ueU-K4-LnG" kind="relationship" relationship="rootViewController" id="hSf-ac-TgW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ymr-gv-grZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1162" y="-456"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="HZV-dn-QHf"/>
+    </inferredMetricsTieBreakers>
 </document>
