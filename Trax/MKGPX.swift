@@ -18,6 +18,9 @@ class EditableWaypoint: GPX.Waypoint {
     }
   }
 
+  // Just for Demo
+  override var thumbnailURL: NSURL? { return imageURL }
+  override var imageURL: NSURL? { return links.first?.url }
 }
 
 

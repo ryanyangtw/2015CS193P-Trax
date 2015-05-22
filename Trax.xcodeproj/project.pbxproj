@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		944724F91B0F428D00D83C59 /* WaypointImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944724F81B0F428D00D83C59 /* WaypointImageViewController.swift */; };
+		944724FB1B0F44FF00D83C59 /* SimpleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944724FA1B0F44FF00D83C59 /* SimpleMapViewController.swift */; };
 		946FEBC41B0C6FCE00DA0D56 /* GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FEBC31B0C6FCE00DA0D56 /* GPX.swift */; };
 		946FEBC61B0C729800DA0D56 /* MKGPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FEBC51B0C729800DA0D56 /* MKGPX.swift */; };
 		946FEBC81B0C7CE500DA0D56 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FEBC71B0C7CE500DA0D56 /* ImageViewController.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		944724F81B0F428D00D83C59 /* WaypointImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointImageViewController.swift; sourceTree = "<group>"; };
+		944724FA1B0F44FF00D83C59 /* SimpleMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleMapViewController.swift; sourceTree = "<group>"; };
 		946FEBC31B0C6FCE00DA0D56 /* GPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPX.swift; sourceTree = "<group>"; };
 		946FEBC51B0C729800DA0D56 /* MKGPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKGPX.swift; sourceTree = "<group>"; };
 		946FEBC71B0C7CE500DA0D56 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 				946FEBC51B0C729800DA0D56 /* MKGPX.swift */,
 				946FEBC71B0C7CE500DA0D56 /* ImageViewController.swift */,
 				946FEBC91B0D803F00DA0D56 /* EditWaypointViewController.swift */,
+				944724F81B0F428D00D83C59 /* WaypointImageViewController.swift */,
+				944724FA1B0F44FF00D83C59 /* SimpleMapViewController.swift */,
 				9498217D1B0B24EC00AC3239 /* Supporting Files */,
 			);
 			path = Trax;
@@ -225,11 +231,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				949821821B0B24EC00AC3239 /* GPXViewController.swift in Sources */,
+				944724F91B0F428D00D83C59 /* WaypointImageViewController.swift in Sources */,
 				946FEBC61B0C729800DA0D56 /* MKGPX.swift in Sources */,
 				946FEBCA1B0D803F00DA0D56 /* EditWaypointViewController.swift in Sources */,
 				946FEBC81B0C7CE500DA0D56 /* ImageViewController.swift in Sources */,
 				949821801B0B24EC00AC3239 /* AppDelegate.swift in Sources */,
 				946FEBC41B0C6FCE00DA0D56 /* GPX.swift in Sources */,
+				944724FB1B0F44FF00D83C59 /* SimpleMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
